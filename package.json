@@ -1,0 +1,21 @@
+{
+  "name": "just-books-790",
+  "version": "1.0.0",
+  "description": "Welcome, we're are team “Timely”, and this Readme contains details about our project. We‘ve built a cloned website of Timelyapp.com  This overall project was a part of our construct week at Masai School.",
+  "main": "index.js",
+  "scripts": {
+    "start":"node Server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aun0545088/Just-Books-790.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aun0545088/Just-Books-790/issues"
+  },
+  "homepage": "https://github.com/aun0545088/Just-Books-790#readme"
+}
