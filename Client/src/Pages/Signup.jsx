@@ -34,7 +34,7 @@ const Signup = () => {
   const onSubmit = async (data) => {
     console.log(data);
     await axios
-      .post("https://whispering-thicket-24456.herokuapp.com/user/signup", data)
+      .post("https://timely-tw31.onrender.com/user/signup", data)
       .then((res) => {
         navigate("/login");
       })

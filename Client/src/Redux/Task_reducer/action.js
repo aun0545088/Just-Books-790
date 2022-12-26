@@ -5,7 +5,7 @@ export const addNewProject = (params) => (dispatch) => {
   console.log(params);
   return axios
     .post(
-      "https://whispering-thicket-24456.herokuapp.com/task/create",
+      "https://timely-tw31.onrender.com/task/create",
       params,
       {
         headers: {
@@ -25,7 +25,7 @@ export const addNewProject = (params) => (dispatch) => {
 
 export const getTaskProject = () => (dispatch) => {
   axios
-    .get("https://whispering-thicket-24456.herokuapp.com/task", {
+    .get("https://timely-tw31.onrender.com/task", {
       headers: {
         "Content-Type": "application/json",
         authentication: `Bearer ${localStorage.getItem("token")}`,
@@ -43,7 +43,7 @@ export const editProject = (refNO, UpdatedTask, projectId) => (dispatch) => {
   // console.log("action",refNO)
   axios
     .patch(
-      `https://whispering-thicket-24456.herokuapp.com/task/edit`,
+      `https://timely-tw31.onrender.com/task/edit`,
       UpdatedTask,
       {
         headers: {
@@ -61,7 +61,7 @@ export const editProject = (refNO, UpdatedTask, projectId) => (dispatch) => {
 export const deleteProject = (refNO) => (dispatch) => {
   axios
     .delete(
-      `https://whispering-thicket-24456.herokuapp.com/task/${refNO}/delete`,
+      `https://timely-tw31.onrender.com/task/${refNO}/delete`,
       {
         headers: {
           "Content-Type": "application/json",

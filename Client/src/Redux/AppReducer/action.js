@@ -99,7 +99,7 @@ const getProjets = (payload) => (dispatch) => {
   dispatch(getProjectRequest());
 
   axios
-    .get("https://whispering-thicket-24456.herokuapp.com/project", {
+    .get("https://timely-tw31.onrender.com/project", {
       headers: {
         "Content-Type": "application/json",
         authentication: `Bearer ${localStorage.getItem("token")}`,
@@ -112,16 +112,12 @@ const getProjets = (payload) => (dispatch) => {
 const addProjects = (payload) => (dispatch) => {
   dispatch(addProjectRequest());
   return axios
-    .post(
-      "https://whispering-thicket-24456.herokuapp.com/project/create",
-      payload,
-      {
-        headers: {
-          "Content-Type": "application/json",
-          authentication: `Bearer ${localStorage.getItem("token")}`,
-        },
-      }
-    )
+    .post("https://timely-tw31.onrender.com/project/create", payload, {
+      headers: {
+        "Content-Type": "application/json",
+        authentication: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
     .then((res) => {
       dispatch(addProjectSuccess());
       console.log(res.data);
@@ -133,15 +129,12 @@ const deleteProjtes = (payload) => (dispatch) => {
   console.log(payload);
   dispatch(deleteProjectRequest());
   return axios
-    .delete(
-      `https://whispering-thicket-24456.herokuapp.com/project/delete/${payload}`,
-      {
-        headers: {
-          "Content-Type": "application/json",
-          authentication: `Bearer ${localStorage.getItem("token")}`,
-        },
-      }
-    )
+    .delete(`https://timely-tw31.onrender.com/project/delete/${payload}`, {
+      headers: {
+        "Content-Type": "application/json",
+        authentication: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
     .then((res) => {
       dispatch(deleteProjectSuccess());
       console.log(res.data);
@@ -155,7 +148,7 @@ const editProject = (payload) => (dispatch) => {
   dispatch(patchProjectRequest());
   return axios
     .patch(
-      `https://whispering-thicket-24456.herokuapp.com/project/edit/${payload.id}`,
+      `https://timely-tw31.onrender.com/project/edit/${payload.id}`,
       payload.body,
       {
         headers: {

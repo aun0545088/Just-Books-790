@@ -5,7 +5,7 @@ import axios from "axios";
 export const loginApi = (data) => (dispatch) => {
   dispatch({ type: LOGIN_LOADING });
   return axios
-    .post("https://whispering-thicket-24456.herokuapp.com/user/login", {
+    .post("https://timely-tw31.onrender.com/user/login", {
       email: data.email,
       password: data.password,
     })
